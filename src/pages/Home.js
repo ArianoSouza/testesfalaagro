@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import Carrossel from '../components/Carrossel';
 import Categories from '../components/Categories';
 import Footer from '../components/Footer'
+import DestaquesProdutos from '../components/ProdutosDestaques'
+
 
 
 
@@ -12,6 +14,7 @@ function Home(){
         <Navbar/> 
         <Carrossel/>
         <Categories/>
+        <DestaquesProdutos/>
         <Footer/>
     </div>
       
