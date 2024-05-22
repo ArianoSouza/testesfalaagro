@@ -52,3 +52,10 @@ cursor: pointer;
 position:absolute;
 right: 0px;
 }
+
+#link-entrar:active{
+   color:rgb(73, 73, 73) ;
+}
+#link-entrar{
+   text-decoration: none;
+}
