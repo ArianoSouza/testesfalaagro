@@ -13,6 +13,7 @@ function Indexnavbar(){
         <input type="text" placeholder='Buscar...' id='input-nav'/>
         <button id='botao-carrinho-nav'><img src={basket} alt="Carrinho" id='carrinho-img'/></button>
         <button id='botao-entrar-nav'><Link id= 'link-entrar' to = '/Login'>Entrar</Link></button>
+        <button id='botao-anunciar-nav'><Link id= 'link-anunciar' to = '/Anunciar'>Anunciar</Link></button>
       </div>
     )
 }
