@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/Categories.css'
+import '../Styles/Categories.css'
 import heavymachine from '../img/heavymachine.svg'
 
 function Categories(){

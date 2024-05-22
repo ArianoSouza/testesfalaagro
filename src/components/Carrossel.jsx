@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import '../styles/Carrossel.css'
+import '../Styles/Carrossel.css'
 import image1 from '../img/carrossel1.jpeg'
 import image2 from '../img/carrossel2.jpg'
 import image3 from '../img/carrossel3.jpeg'

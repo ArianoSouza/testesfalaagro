@@ -1,0 +1,89 @@
+.background{
+    font-family: sans-serif;
+      margin: 0;
+      background-image: url(../img/background.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 0;
+      height: 100%;
+    }
+    
+    .divmae{
+       display: flex;
+      flex-wrap: wrap;
+    }
+    .imglogo{
+      width: 40%;
+      height: auto;
+      width: 240px; 
+      margin-right: 20px;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-right: 3px solid #7FE613;
+    }
+    .conteiner{
+        width: 40%; 
+      max-width: 800px; 
+      margin: 40px auto;
+      background-color: #F1F3F4;
+      border: 3px solid #7FE613;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .form {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 0.5vh; 
+        background-color: #F1F3F4 ; 
+    }
+    .h1{
+        font-size: 1.5em; 
+        margin: 0;
+        color: #7FE613;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .label {
+        display: flex;
+        margin-bottom: 5px;
+        color: #3D221B; 
+      }
+    .section {
+        margin-bottom: 20px;
+      }
+    .h2{
+        display: flex;
+        font-size: 18px;
+        color: #7FE613; 
+        margin-bottom: 10px;
+    }
+    .input,
+    .textarea,
+    .selectCategoria{
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #3D221B;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .textarea {
+        height: 100px;
+        resize: vertical;
+      }
+    .botao {
+        background-color: #7FE613; 
+        color: white;
+        padding: 10px 20px;
+        margin-top: 2.5vh;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: static;
+    }
