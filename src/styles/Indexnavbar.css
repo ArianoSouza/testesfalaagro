@@ -1,3 +1,6 @@
+
+
+
 .container{
 width: 100%;
 height: 7vw;
@@ -10,6 +13,8 @@ align-items: center;
 margin-left: 2vw;
 cursor: pointer;
 }
+
+
 #input-nav:focus{
    outline-color: rgb(184, 184, 184);
    width: 50%;
@@ -24,13 +29,22 @@ border-radius: 5px;
 border-width: 1px;
 border-color: rgb(151, 201, 76);
 transition: 0.3s;
+box-shadow: 0px 0px 0px rgb(156, 230, 45)
+}
+#input-nav:hover{
+   box-shadow: 0px 0px 10px rgb(156, 230, 45)
 }
 
 #botao-carrinho-nav{
    position: absolute;
-   right: 10vw;
+   right: 20vw;
 border: 0px;
 cursor: pointer;
+border-radius: 15px;
+}
+#botao-carrinho-nav:hover{
+   box-shadow: 0px 0px 10px rgb(103, 161, 15);
+   transition: 0.5s;
 }
 
 #carrinho-img{
@@ -51,27 +65,45 @@ margin-right: 2vw;
 cursor: pointer;
 position:absolute;
 right: 0px;
+box-shadow: 0px 0px 0px rgb(156, 230, 45);
+transition: 0.5s;
+}
+
+#botao-entrar-nav:hover{
+   box-shadow: 0px 0px 10px black;
+   transition: 0.5s;
 }
 #link-entrar:active{
-   color:rgb(73, 73, 73) ;
+   color:rgb(103, 161, 15) ;
 }
 #link-entrar{
    text-decoration: none;
+   color:rgb(73, 73, 73) 
+
 }
 #botao-anunciar-nav{
+   width: 7vw;
+   height: 3vw;
+   border-radius: 15px;
    padding: 0px;
-   margin-left: 50px;
-   margin-right: 50px;
+   margin-left: 4vw;
+   margin-right: 4vw;
    border: none;
    justify-content: center;
-   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, ;
-   font-size: 1.5vw;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial,  sans-serif;
+   font-size: 1.4vw;
    color: black;
    cursor: pointer;
-   position: relative;
-   background-color: rgb(245, 245, 245);
+   position: absolute;
+   right: 7vw;
+   background-color: rgb(233, 233, 233);
+   box-shadow: 0px 0px 0px rgb(156, 230, 45);
  }
- #botao-anunciar-nav::after{
+ #botao-anunciar-nav:hover{
+   box-shadow: 0px 0px 15px rgb(103, 161, 15);  
+   transition: 1s
+}
+ /*#botao-anunciar-nav::after{
    content: " ";
    width: 0%;
    height: 2px;
@@ -83,7 +115,45 @@ right: 0px;
  }
  #botao-anunciar-nav:hover::after{
    width: 100%;
- }
+   box-shadow: 0px 0px 10px rgb(178, 255, 171);
+ }*/
  #link-anunciar{
     text-decoration: none;
+    background-color: none;
+    color: black;
  }
+ #link-anunciar:active{
+   color: rgb(103, 161, 15);
+}
+
+
+@media (max-width: 550px) {
+   .container{
+     height: 20vw;
+   }
+   #logo-nav{
+      width: 40vw;
+   }
+   #botao-entrar-nav{
+      width: 15vw;
+      height: 10vw;
+      font-size: 4vw;
+   }
+   #input-nav{
+      visibility: hidden;
+   }
+   #botao-anunciar-nav{
+      right: 15vw;
+      width: 18vw;
+      height: 10vw;
+      font-size: 3.5vw;
+   }
+   #botao-carrinho-nav{
+      right: 40vw;
+      width: 10vw;
+      height: 10vw;
+   }
+   #carrinho-img{
+      width: 5vw;
+   }
+}

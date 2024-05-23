@@ -18,7 +18,13 @@
     cursor: pointer;
     border-radius: 15px;
     background-color: rgb(245, 245, 245);
-    box-shadow: 2px 2px 7px black;
+    box-shadow: 3px 3px 10px black;
+    transition: 0.5s;
+    font-size: 0.9vw;
+}
+.containerProduto:hover{
+    box-shadow: 3px 3px 15px rgb(103, 161, 15);
+    transition: 0.5s;
 }
 
 .carrosselItensAjust{

@@ -69,10 +69,6 @@ function retornaEstado (value){
 }
 }
 
-const valorzao = Produtos.filter(retornaEstado)
-
-console.log (valorzao)
-console.log(valorzao[0].nome)
 
 
 
@@ -111,9 +107,54 @@ console.log(valorzao[0].nome)
             <div className={styles.carrosselItensAjust}>
                 <div className={styles.containerAllProducts} id="all-products">
                   <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={valorzao[0].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{valorzao[0].nome}</p>
-                    <p>{valorzao[0].descrição}</p>
+                    <Link to='/Produtos'><img src={Produtos[0].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[0].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[0].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[1].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[1].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[1].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[2].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[2].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[2].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[3].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[3].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[3].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[4].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[4].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[4].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[5].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[5].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[5].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[6].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[6].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[6].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[7].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[7].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[7].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[8].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[8].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[8].descrição}</p>
+                  </div>
+                  <div className={styles.containerProduto}>
+                    <Link to='/Produtos'><img src={Produtos[9].img} alt="" className={styles.imgStyle}/></Link>
+                    <p>{Produtos[9].nome}</p>
+                    <p style={{textAlign: "center"}}>{Produtos[9].descrição}</p>
                   </div>
                 </div>
             </div>
