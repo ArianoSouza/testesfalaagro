@@ -10,67 +10,62 @@ import { Link, useNavigate } from "react-router-dom";
 function DestaquesProdutos(){
     const [value,setValue] = useState(0)
    
-    const Produtos = [ {
-        "nome": "Maçã",
-        "descrição": "Uma fruta comestível de casca fina e polpa branca.",
-        "img": require("../img/vaca.jpeg")
+    
+    const Produtos = [
+      {
+          nome: "Trator Agrícola",
+          descrição: "Máquina utilizada para realizar atividades agrícolas como aragem, plantio e colheita.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Cachorro",
-        "descrição": "Um mamífero doméstico conhecido por sua lealdade aos humanos.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Semente de Milho",
+          descrição: "Semente utilizada para o plantio de milho, uma das culturas mais importantes em diversas partes do mundo.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Montanha",
-        "descrição": "Uma elevação natural da superfície terrestre, geralmente com um pico.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Fertilizante Orgânico",
+          descrição: "Produto utilizado para fornecer nutrientes às plantas de forma natural e sustentável.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Livro",
-        "descrição": "Um conjunto de páginas impressas ou em formato digital, contendo texto ou imagens.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Colheitadeira",
+          descrição: "Máquina utilizada para a colheita de grandes áreas de cultivo, como grãos e cereais.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Café",
-        "descrição": "Uma bebida feita a partir dos grãos torrados da planta de café.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Adubo Químico",
+          descrição: "Produto químico utilizado para fertilizar o solo e promover o crescimento das plantas.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Computador",
-        "descrição": "Uma máquina eletrônica capaz de processar dados e executar tarefas.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Enxada",
+          descrição: "Ferramenta manual utilizada para cavar e revolver o solo.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Futebol",
-        "descrição": "Um esporte de equipe jogado com uma bola redonda entre dois times de onze jogadores.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Ração para Gado",
+          descrição: "Alimento balanceado desenvolvido para a nutrição de gado de corte ou leiteiro.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Piano",
-        "descrição": "Um instrumento musical de teclado que produz som através da vibração das cordas.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Plantadeira",
+          descrição: "Máquina utilizada para o plantio de sementes em linhas, garantindo espaçamento uniforme.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Universo",
-        "descrição": "A totalidade do espaço, tempo, matéria e energia existentes.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Pulverizador Agrícola",
+          descrição: "Equipamento utilizado para aplicar defensivos agrícolas como pesticidas e herbicidas.",
+          img: require("../img/vaca.jpeg")
       },
       {
-        "nome": "Avião",
-        "descrição": "Uma aeronave mais pesada que o ar, capaz de voar utilizando motores.",
-        "img": require("../img/vaca.jpeg")
+          nome: "Estufa Agrícola",
+          descrição: "Estrutura destinada ao cultivo protegido de plantas, proporcionando condições controladas de temperatura e umidade.",
+          img: require("../img/vaca.jpeg")
       }
-]
+  ];
+  
 
-// console.log(todosProdutos)
-function retornaEstado (value){
-  if (value.nome === "Maçã"){
-  return value
-}
-}
-
-
-
+  
 
     function changeValuePlus(){
         if (value >= 0){
@@ -86,11 +81,22 @@ function retornaEstado (value){
         setValue(value-20)
     }
     }
-   
+    
+    const checkProducs = (prod,index) => {
+      while (index < 9){
+      return(
+            <div className={styles.containerProduto}>
+              <Link to='/Produtos'><img src={Produtos[index].img} alt="" className={styles.imgStyle}/></Link>
+              <p>{Produtos[index].nome}</p>
+              <p style={{textAlign: "center"}}>{Produtos[index].descrição}</p>
+            </div>
+
+      )
+    }
+    }
   
     useEffect (()=>{
         let containerAllProductsTranslate = document.getElementById('all-products')
-
         containerAllProductsTranslate.style.transform =`translateX(${value}%)`
         
 
@@ -102,60 +108,10 @@ function retornaEstado (value){
   
         return (
         <div className={styles.containerDestaques}>
-
             <button onMouseDown={changeValuePlus} className={styles.buttonCarrossel}> <img src={leftButton} alt="" /> </button>
             <div className={styles.carrosselItensAjust}>
                 <div className={styles.containerAllProducts} id="all-products">
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[0].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[0].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[0].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[1].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[1].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[1].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[2].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[2].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[2].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[3].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[3].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[3].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[4].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[4].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[4].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[5].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[5].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[5].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[6].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[6].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[6].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[7].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[7].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[7].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[8].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[8].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[8].descrição}</p>
-                  </div>
-                  <div className={styles.containerProduto}>
-                    <Link to='/Produtos'><img src={Produtos[9].img} alt="" className={styles.imgStyle}/></Link>
-                    <p>{Produtos[9].nome}</p>
-                    <p style={{textAlign: "center"}}>{Produtos[9].descrição}</p>
-                  </div>
+                  {Produtos.map(checkProducs)}
                 </div>
             </div>
             <button onMouseDown={changeValueMinus} className={styles.buttonCarrossel}> <img src={rightButton} alt="" /> </button>

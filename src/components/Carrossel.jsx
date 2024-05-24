@@ -26,6 +26,7 @@ function Carrossel(){
         }
     ]
 
+
     const Cards = TeT.filter(value =>(value.id === 'cardbemvindo' || 'sessaomaquinas' ||'façaseucadastro'))
 
     return(
